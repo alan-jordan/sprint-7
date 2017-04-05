@@ -21,3 +21,29 @@ var isEven = function(num) {
     return isEven(num - 2);
   }
 }
+
+// Bean counting function
+var numBs = 0;
+var countBs = function (str) {
+  for(var i = 0; i < str.length; i++) {
+    if(str[i] ==="B") {
+      numBs++;
+    }
+  }
+  return numBs;
+}
+
+var numChars = 0;
+var countChar = function(str, char) {
+  for(var i = 0; i < str.length; i++) {
+    if(str[i] === char) {
+      numChars++;
+    }
+  }
+  return numChars;
+}
+
+console.log(countBs("BBC"));
+// → 2
+console.log(countChar("kakkerlak", "k"));
+// → 4
